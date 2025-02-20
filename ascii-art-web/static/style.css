@@ -1,0 +1,189 @@
+body {
+  margin: 0%; 
+  padding:0%; 
+  width:100%;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.container {
+  padding-right: 10px;
+  overflow: hidden;  
+  display: grid;
+}
+
+* {
+  outline: none; 
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  /* font-weight: bold; */
+}
+
+/* background body */
+.background-light {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  opacity: 0.3;
+  filter: blur(120px);
+}
+.light1 {
+  background: #A855F7;
+  animation: mv1 8s infinite ;
+  left: 0;
+  top: 0; 
+}
+.light2 {
+  background: #F472B6; 
+  animation: mv2 10s infinite ;
+  right: 0;
+  bottom: 0;
+}
+/* end background */
+
+.nav {
+  height: 50px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  font-size:30px;
+  color: aliceblue;
+  text-decoration: underline;
+  box-shadow: 1px 0px 10px rgb(15, 15, 15);
+}
+
+/* ------ start section 1 */
+.section {
+  background-color: rgb(117, 106, 106);
+  height: 180px;
+  width: 70%;
+  margin: auto;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 3%;
+  box-shadow: 0px 0px 10px 5px rgb(58, 53, 57);
+  overflow: hidden;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.form div {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  color: azure;
+  margin-bottom: 20px;
+}
+
+.form div label {
+  font-size: large;
+  color: azure;
+  align-content: center;
+  text-decoration: underline;
+}
+
+.form div input {
+  width: 70%;
+  border-radius: 5px;
+  border-color: azure;
+  color: rgb(87, 80, 80);
+}
+
+.form div select {
+  width: 71%;
+  border-radius: 5px;
+  border-color: azure;
+  font-size: large;
+  color: rgb(87, 80, 80);
+}
+
+.form div select option {
+  color: rgb(87, 80, 80);
+}
+
+.btn {
+  border-radius: 10px;
+  border: none;
+  color: rgb(87, 80, 80);
+  padding: 10px ;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: large;
+  font-weight: bold;
+  float: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: #403c44;
+  color: white;
+}
+
+.btn:active {
+  transform: translateY(2px);
+  background: #555454;
+}
+
+/* ------end of section 1 */
+
+/* start section 2 */
+.section2 {
+  width: 100%;
+  height: 300px; 
+  border-radius: 0%;
+  padding-right: 15px;
+}
+
+.output {
+  width: 99%;
+  height: 100%;
+  border-radius: 5px;
+  border-color: azure;
+  border: none;
+  background-color: #2c2c2c;
+  color: rgb(255, 255, 255);
+  font-size: small;
+  resize: none;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  /* line-height: 1.7; */
+}
+/* end section2 */
+
+/* Animations */
+@keyframes mv0 {
+  0% {
+    transform: translate(0%, -100%);
+    transition: 2s;
+  }
+  50% {
+    transform: translate(0%, 40%);
+    transition: 2s;
+  }
+}
+
+@keyframes mv1 {
+  0%, 100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(50%, 50%);
+  }
+}
+
+@keyframes mv2 {
+  0%, 100% {
+    transform: translate(50%, 50%);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+}
